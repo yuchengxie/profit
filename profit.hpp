@@ -22,6 +22,7 @@ class profit : public eosio::contract
                                                                         [[eosio::action]] void bet(name player, name referrer, const asset &bet);
     [[eosio::action]] void stake(name user, asset &amount);
     [[eosio::action]] void unstake(name user, asset &amount);
+    [[eosio::action]] void claim(name user);
 
   public:
     struct [[eosio::table]] pool
@@ -43,6 +44,7 @@ class profit : public eosio::contract
     {
         uint64_t id;
         name account;
+        name referrer;
         asset balance;
         int64_t primary_key() const { return id; }
     };

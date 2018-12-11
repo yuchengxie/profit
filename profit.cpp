@@ -9,11 +9,11 @@ void profit::bet(name player, name referrer, const asset &bet)
     require_auth(player);
     auto cur_player_itr = _accounts.find(1);
     eosio_assert(cur_player_itr != _accounts.end(), "unknow account");
-    
+
     //transfer platform currency
-    transaction out{};
-    out.actions.emplace_back(permission_level{_self, "active"_n}, "eosio.token"_n, "transfer"_n, std::make_tuple("TEST"));
-    out.send("TEST",_self);
+    // transaction out{};
+    // out.actions.emplace_back(permission_level{_self, "active"_n}, "eosio.token"_n, "transfer"_n, std::make_tuple("TEST"));
+    // out.send("TEST", _self);
 }
 
 void profit::stake(name user, asset &amount)
@@ -24,6 +24,11 @@ void profit::stake(name user, asset &amount)
 void profit::unstake(name user, asset &amount)
 {
     print("unstake...", user, "\n");
+}
+
+void profit::claim(name user)
+{
+    
 }
 
 EOSIO_DISPATCH(profit, (bet)(stake)(unstake))
