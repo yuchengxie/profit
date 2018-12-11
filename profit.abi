@@ -1,0 +1,73 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Tue Dec 11 00:27:50 2018",
+    "version": "eosio::abi/1.0",
+    "structs": [
+        {
+            "name": "bet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "player",
+                    "type": "name"
+                },
+                {
+                    "name": "referrer",
+                    "type": "name"
+                },
+                {
+                    "name": "bet",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "stake",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "unstake",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "bet",
+            "type": "bet",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "stake",
+            "type": "stake",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unstake",
+            "type": "unstake",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}
